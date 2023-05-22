@@ -1,3 +1,12 @@
+@font-face {
+    font-family: switch;
+    src: url("/assets/switch-font.ttf");
+}
+
+html {
+    font-family: switch, sans-serif;
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -35,6 +44,31 @@
     filter: drop-shadow(5px 5px 4px #adadaf);
 }
 
-.game-mouseover {
-    filter: drop-shadow(0 0 0.35rem cyan);
+.icon-hover {
+    filter: drop-shadow(0 0 0.5rem cyan);
+}
+
+.hidden {
+    display: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: solid rgb(170, 168, 168);
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+}
+
+#current-time {
+    font-weight: bold;
+}
+
+#ok {
+    font-weight: bold;
 }
