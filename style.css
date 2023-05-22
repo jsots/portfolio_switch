@@ -1,0 +1,40 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.round {
+    border-radius: 100px;
+}
+
+.header-right {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.game-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px 0 30px 0;
+}
+
+.game {
+    border: solid gray;
+    filter: drop-shadow(5px 5px 4px #adadaf);
+}
+
+.game-mouseover {
+    filter: drop-shadow(0 0 0.35rem cyan);
+}
