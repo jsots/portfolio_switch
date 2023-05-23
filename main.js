@@ -22,8 +22,17 @@ function updateTime() {
 // Call updateTime function every second
 setInterval(updateTime, 1000);  
 
-let icons = document.querySelectorAll(".icon")
+let icons = document.querySelectorAll(".icon");
 let audio = new Audio('assets/Enter-&-Back.mp3');
+let settings = document.querySelector("#settings")
+
+settings.addEventListener("mouseover", () => {
+    settings.classList.add("rotate-image")
+})
+
+settings.addEventListener("mouseleave", () => {
+    settings.classList.remove("rotate-image")
+})
 
 icons.forEach((icon) => {
     icon.addEventListener("mouseover", () => {
