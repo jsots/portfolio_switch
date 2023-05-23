@@ -92,7 +92,7 @@ html {
     }
 }
 
-@media only screen and (max-width: 480px) and (-webkit-device-pixel-ratio: 2) {
+@media only screen and (max-width: 480px) {
     /* Styles for iPhones */
     #screen-logo {
         content: url("https://media.istockphoto.com/id/1252614899/vector/mobile-phone.jpg?s=612x612&w=0&k=20&c=e_TSUrit9i53XJBEAF1mmnD8cDj2A2lYnQDGSdb2g9Y=");
