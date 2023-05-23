@@ -37,13 +37,15 @@ html {
     margin: 30px 0 30px 0;
     overflow-x: auto; /* Enable horizontal scrolling */
     white-space: nowrap; /* Prevent line breaks */
+    padding: 10px;
 }
 
 .game-wrapper {
     display: inline-block; /* Ensure content stays in a single line */
     width: max-content;
     position: relative;
-    margin: 0 20px;   
+    margin: 0 20px;
+    line-height: 0; 
 }
 
 .game-overlay {
@@ -57,13 +59,12 @@ html {
     text-align: center;
 }
 
-.game {
-    border: solid gray;
-    filter: drop-shadow(5px 5px 4px #adadaf);
+.icon:not(.icon-hover), .game-wrapper:not(.icon-hover) {
+    border: solid 3px transparent;
 }
 
 .icon-hover {
-    filter: drop-shadow(0 0 0.5rem cyan);
+    border: solid 3px cyan;
 }
 
 .hidden {
