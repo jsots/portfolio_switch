@@ -41,6 +41,15 @@ icons.forEach((icon) => {
     icon.addEventListener("mouseleave", () => {
         icon.classList.remove("icon-hover")
     })
+    icon.addEventListener("click", () => {
+        icon.classList.add("icon-hover");
+        setTimeout(() => {
+            icon.classList.remove("icon-hover");
+        }, 500);
+        setTimeout(() => {
+            icon.classList.remove("rotate-image");
+        }, 500);
+    });
     icon.addEventListener('click', playSound);
 })
 
