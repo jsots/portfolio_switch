@@ -22,7 +22,8 @@ function updateTime() {
 // Call updateTime function every second
 setInterval(updateTime, 1000);  
 
-let icons = document.querySelectorAll(".round")
+let icons = document.querySelectorAll(".icon")
+let audio = new Audio('assets/Enter-&-Back.mp3');
 
 icons.forEach((icon) => {
     icon.addEventListener("mouseover", () => {
@@ -31,4 +32,9 @@ icons.forEach((icon) => {
     icon.addEventListener("mouseleave", () => {
         icon.classList.remove("icon-hover")
     })
+    icon.addEventListener('click', playSound);
 })
+
+function playSound() {
+  audio.play();
+}
