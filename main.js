@@ -56,3 +56,32 @@ icons.forEach((icon) => {
 function playSound() {
   audio.play();
 }
+// Get all the game wrappers
+const gameWrappers = document.querySelectorAll('.game-wrapper');
+
+// Iterate over each game wrapper
+gameWrappers.forEach((gameWrapper) => {
+    const overlay = gameWrapper.querySelector('.game-overlay');
+    const gameTitle = gameWrapper.querySelector('.game-info h3').textContent;
+    const gameDescription = gameWrapper.querySelector('.game-info p').textContent;
+    
+    // Add event listeners for mouse-over and mouse-out
+    gameWrapper.addEventListener('mouseover', showOverlay);
+    gameWrapper.addEventListener('mouseout', hideOverlay);
+
+    // Function to show the overlay
+    function showOverlay() {
+        overlay.style.display = 'block';
+        gameWrapper.classList.add("icon-hover")
+    }
+    
+    // Function to hide the overlay
+    function hideOverlay() {
+        overlay.style.display = 'none';
+        gameWrapper.classList.remove("icon-hover")
+    }
+
+    // Set the game information and button links
+    overlay.querySelector('.game-info h3').textContent = gameTitle;
+    overlay.querySelector('.game-info p').textContent = gameDescription;
+});
