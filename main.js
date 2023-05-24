@@ -63,7 +63,6 @@ const gameWrappers = document.querySelectorAll('.game-wrapper');
 gameWrappers.forEach((gameWrapper) => {
     const overlay = gameWrapper.querySelector('.game-overlay');
     const gameTitle = gameWrapper.querySelector('.game-info h3').textContent;
-    const gameDescription = gameWrapper.querySelector('.game-info p').textContent;
     
     // Add event listeners for mouse-over and mouse-out
     gameWrapper.addEventListener('mouseover', showOverlay);
@@ -83,5 +82,26 @@ gameWrappers.forEach((gameWrapper) => {
 
     // Set the game information and button links
     overlay.querySelector('.game-info h3').textContent = gameTitle;
-    overlay.querySelector('.game-info p').textContent = gameDescription;
+});
+
+let modal = document.getElementById('modal');
+let headerImage = document.querySelector('.header img');
+let closeButton = document.querySelector('.close');
+let mainContainer = document.querySelector('.main-container');
+
+headerImage.addEventListener('click', function() {
+  modal.style.display = 'block';
+  mainContainer.classList.add('blur');
+});
+
+closeButton.addEventListener('click', function() {
+  modal.style.display = 'none';
+  mainContainer.classList.remove('blur');
+});
+
+modal.addEventListener('click', function(event) {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+    mainContainer.classList.remove('blur');
+  }
 });
