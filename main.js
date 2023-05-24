@@ -67,17 +67,15 @@ gameWrappers.forEach((gameWrapper) => {
 
     function showOverlay() {
         overlay.style.display = 'block';
-        gameWrapper.classList.add("icon-hover");
         game.style.filter = 'blur(2px)';
+        game.style.border = "solid 3px cyan"
     }
     
     function hideOverlay() {
         overlay.style.display = 'none';
-        gameWrapper.classList.remove("icon-hover");
         game.style.filter = 'none';
+        game.style.border = "solid 3px transparent"
     }
-
-    overlay.querySelector('.game-info h3').textContent = gameTitle;
 });
 
 let modal = document.getElementById('modal');
