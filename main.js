@@ -1,6 +1,4 @@
-// Function to update the current time
 function updateTime() {
-    // Create a new Date object
     let currentTime = new Date();
 
     // Get the current time components
@@ -19,12 +17,12 @@ function updateTime() {
     document.getElementById('current-time').innerHTML = formattedTime;
 }
 
-// Call updateTime function every second
 setInterval(updateTime, 1000);  
 
 let icons = document.querySelectorAll(".icon");
 let audio = new Audio('assets/Enter-&-Back.mp3');
-let settings = document.querySelector("#settings")
+let settings = document.querySelector("#settings");
+let games = document.querySelectorAll(".game")
 
 settings.addEventListener("mouseover", () => {
     settings.classList.add("rotate-image")
@@ -56,3 +54,48 @@ icons.forEach((icon) => {
 function playSound() {
   audio.play();
 }
+
+const gameWrappers = document.querySelectorAll('.game-wrapper');
+
+gameWrappers.forEach((gameWrapper) => {
+    const overlay = gameWrapper.querySelector('.game-overlay');
+    const gameTitle = gameWrapper.querySelector('.game-info h3').textContent;
+    const game = gameWrapper.querySelector('.game');
+
+    gameWrapper.addEventListener('mouseover', showOverlay);
+    gameWrapper.addEventListener('mouseout', hideOverlay);
+
+    function showOverlay() {
+        overlay.style.display = 'block';
+        game.style.filter = 'blur(2px)';
+        game.style.border = "solid 3px cyan"
+    }
+    
+    function hideOverlay() {
+        overlay.style.display = 'none';
+        game.style.filter = 'none';
+        game.style.border = "solid 3px transparent"
+    }
+});
+
+let modal = document.getElementById('modal');
+let headerImage = document.querySelector('.header img');
+let closeButton = document.querySelector('.close');
+let mainContainer = document.querySelector('.main-container');
+
+headerImage.addEventListener('click', function() {
+  modal.style.display = 'block';
+  mainContainer.classList.add('blur');
+});
+
+closeButton.addEventListener('click', function() {
+  modal.style.display = 'none';
+  mainContainer.classList.remove('blur');
+});
+
+modal.addEventListener('click', function(event) {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+    mainContainer.classList.remove('blur');
+  }
+});

@@ -29,9 +29,39 @@
         </div>
         <div class="game-container">
             <div class="game-wrapper">
-                <img src="assets/tower-of-hanoi.png" width="350px" height="250px" class="game icon">
-                <img src="assets/tic-tac-toe.png" width="400px" height="250px" class="game icon">
-                <img src="assets/snake.png" width="400px" height="250px" class="game icon">
+                <div class="game-info">
+                    <h3 class="title">Tower of Hanoi</h3>
+                </div>
+                <img src="assets/tower-of-hanoi.png" width="350px" height="250px" class="game">
+                <div class="game-overlay">
+                    <div class="game-buttons">
+                        <a href="https://jsots.github.io/Tower-of-Hanoi/" target="_blank"><button class="play-button">Play</button></a>
+                        <a href="https://github.com/jsots/Tower-of-Hanoi" target="_blank"><button class="github-button">GitHub</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="game-wrapper">
+                <div class="game-info">
+                    <h3 class="title">Tic-Tac-Toe</h3>
+                </div>
+                <img src="assets/tic-tac-toe.png" width="350px" height="250px" class="game">
+                <div class="game-overlay">
+                    <div class="game-buttons">
+                        <a href="https://jsots.github.io/Tic-Tac-Toe/" target="_blank"><button class="play-button">Play</button></a>
+                        <a href="https://github.com/jsots/Tic-Tac-Toe" target="_blank"><button class="github-button">GitHub</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="game-wrapper">
+                <div class="game-info">
+                    <h3 class="title">Snake</h3>
+                </div>
+                <img src="assets/snake.png" width="350px" height="250px" class="game">
+                <div class="game-overlay">
+                    <div class="game-buttons">
+                        <a href="https://github.com/jsots/snake_python" target="_blank"><button class="github-button">GitHub</button></a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="link-container">
@@ -56,11 +86,14 @@
                 <span id="ok">OK</span>
             </div>
         </div>
-        <div class="about-container">
-            <h3 class="hidden">About Me</h3>
-            <p class="hidden">I am a skilled full stack developer with a solid foundation in biology, biomedical, and tissue engineering. With exceptional technical and logical abilities, coupled with my experience as a teaching assistant in college, I am a masterful communicator who builds communities in every work environment. I bring a unique blend of scientific knowledge, technical expertise, and interpersonal skills to every project, delivering innovative solutions and driving success. Where I go next is a bit unclear, but I'll probably bring my Switch.</p>
-        </div>
     </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>A little about me</h3>
+          <p>I am a skilled full stack developer with a solid foundation in biology, biomedical, and tissue engineering. With exceptional technical and logical abilities, coupled with my experience as a teaching assistant in college, I am a masterful communicator who builds communities in every work environment. I bring a unique blend of scientific knowledge, technical expertise, and interpersonal skills to every project, delivering innovative solutions and driving success. Where I go next is a bit unclear, but I'll probably bring my Switch.</p>
+        </div>
+      </div>
     <script src="main.js"></script>
 </body>
 </html>
