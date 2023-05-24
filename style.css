@@ -46,6 +46,7 @@ html {
     position: relative;
     margin: 0 20px;
     line-height: 0; 
+    text-align: center;
 }
 
 .game-overlay {
@@ -58,11 +59,48 @@ html {
     text-align: center;
 }
 
-.title {
-    color: cyan;
+.game-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+  
+.game-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    font-family: switch, sans-serif;
 }
 
-.icon:not(.icon-hover), .game-wrapper:not(.icon-hover) {
+.github-button {
+    background:rgba(236, 107, 92);
+    border-radius: 20px;
+    border: solid black;
+    padding: 10px;
+    font-family: switch, sans-serif;
+}
+
+.play-button {
+    background:rgba(86, 194, 224);
+    border-radius: 20px;
+    border: solid black;
+    padding: 10px 20px 10px 20px;
+    font-family: switch, sans-serif;
+}
+  
+.game {
+    border: solid 3px transparent;
+}
+
+.title {
+    color: cyan;
+    margin-bottom: 10px;
+}
+
+.icon:not(.icon-hover) {
     border: solid 3px transparent;
 }
 
