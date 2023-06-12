@@ -81,6 +81,7 @@ html {
     border: solid black;
     padding: 10px;
     font-family: switch, sans-serif;
+    cursor: pointer;
 }
 
 .play-button {
@@ -89,6 +90,7 @@ html {
     border: solid black;
     padding: 10px 20px 10px 20px;
     font-family: switch, sans-serif;
+    cursor: pointer;
 }
   
 .game {
@@ -106,6 +108,7 @@ html {
 
 .icon-hover {
     border: solid 3px cyan;
+    cursor: pointer;
 }
 
 .hidden {
